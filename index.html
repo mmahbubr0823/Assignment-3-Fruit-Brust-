@@ -44,9 +44,9 @@
   <header>
     <section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-2 my-8  lg:text-white">
 
-      <!-- navbar part  -->
+      <!-- navbar part of header section -->
       <nav>
-        <div class="navbar lg:bg-[#F85559] rounded-[600px] px-5">
+        <div class="navbar lg:bg-[#F85559] rounded-[600px] pr-3">
           <div class="navbar-start">
             <div class="dropdown">
               <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -62,7 +62,7 @@
                 <li><a>All Fruits</a></li>
               </ul>
             </div>
-            <ul class="menu menu-horizontal hidden lg:flex  px-1">
+            <ul class="menu menu-horizontal hidden lg:flex">
               <li><a>Home</a></li>
               <li><a>About us</a></li>
               <li><a>Shop</a></li>
@@ -85,10 +85,11 @@
   </header>
 
   <main>
-    <!-- carousel part  -->
+    <!-- carousel section  -->
 
     <section class="max-w-screen-xl mx-auto px-0 md:px-16 lg:px-24 py-2 my-8 relative">
       <div class="carousel w-full h-[300px] lg:h-[400px]">
+        <!-- slide 1 -->
         <div id="slide1" class="carousel-item relative w-full">
           <img src="./images/banner1.png" class="w-full" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -96,6 +97,7 @@
             <a href="#slide2" class="btn btn-circle">❯</a>
           </div>
         </div>
+        <!-- slide 2 -->
         <div id="slide2" class="carousel-item relative w-full">
           <img src="/images/banner2.png" class="w-full" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -103,6 +105,7 @@
             <a href="#slide3" class="btn btn-circle">❯</a>
           </div>
         </div>
+        <!-- slide 3 -->
         <div id="slide3" class="carousel-item relative w-full">
           <img src="/images/banner3.png" class="w-full" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -110,6 +113,7 @@
             <a href="#slide4" class="btn btn-circle">❯</a>
           </div>
         </div>
+        <!-- slide 4 -->
         <div id="slide4" class="carousel-item relative w-full">
           <img src="/images/banner4.png" class="w-full" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -118,6 +122,7 @@
           </div>
         </div>
       </div>
+      <!-- Exotic tastes overlay part of carousel section  -->
       <div class="space-y-4 text-center text-white absolute top-20 left-[20%] lg:left-[25%]">
         <h1 class="text-2xl md:text-2xl lg:text-5xl">
           Exotic tastes at your <br> doorstep
@@ -127,6 +132,7 @@
         </p>
         <button class="rounded-lg bg-[#F85559] text-white px-4 py-3">Shop Now</button>
       </div>
+      <!-- fruits overlay part of carousel section  -->
       <div
         class="flex justify-center gap-10 w-1/2 absolute -mt-[6%] p-5 md:left-[25%] lg:left-[25%] bg-white shadow-lg rounded-lg shadow-[0px 8px 60px 0px rgba(0, 0, 0, 0.05)] hidden lg:flex">
         <div class=" lg:flex">
@@ -151,6 +157,7 @@
     </section>
 
     <!-- Deal of the day section  -->
+
     <section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-2 mt-30 lg:mt-44 mb-8">
       <div class="flex flex-col md:flex-col lg:flex-row justify-between lg:gap-10 text-center mb-12">
         <div class="mb-3">
@@ -192,8 +199,11 @@
           </div>
         </div>
       </div>
+
       <!-- cards section  -->
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <!-- card 1  -->
         <div class="card bg-white border-2 border-[rgba(18, 18, 18, 0.10)]">
           <figure class="px-10 pt-10">
             <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
@@ -210,10 +220,33 @@
               <span><i class="fa-solid fa-star-half-stroke"></i></span>
             </div>
             <div class="card-actions">
-              <button class="text-[#F85559]">Details</button>
+              <button class="text-[#F85559]" onclick="my_modal_1.showModal()">Details</button>
+
+              <!-- modal part 1 -->
+
+              <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                  <img class="mx-auto mb-2" src="./images/fruit6.png" alt="">
+                  <h3 class="font-bold text-lg">Apples!</h3>
+                  <p class="py-4">Press ESC key or click the button below to close</p>
+                  <div class="text-[#F85559] my-3">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                  </div>
+                  <div class="modal-action">
+                    <button class="btn outline outline-2 outline-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
             </div>
           </div>
         </div>
+        <!-- card 2  -->
+
         <div class="card bg-white border-2 border-[rgba(18, 18, 18, 0.10)]">
           <figure class="px-10 pt-10">
             <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
@@ -230,10 +263,34 @@
               <span><i class="fa-solid fa-star-half-stroke"></i></span>
             </div>
             <div class="card-actions">
-              <button class="text-[#F85559]">Details</button>
+              <button class="text-[#F85559]" onclick="my_modal_2.showModal()">Details</button>
+
+              <!-- modal 2  -->
+
+              <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                  <img class="mx-auto mb-2" src="./images/fruit7.png" alt="">
+                  <h3 class="font-bold text-lg">Oranges!</h3>
+                  <p class="py-4">Press ESC key or click the button below to close</p>
+                  <div class="text-[#F85559] my-3">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                  </div>
+                  <div class="modal-action">
+                    <button class="btn outline outline-2 outline-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
             </div>
           </div>
         </div>
+
+        <!-- card 3  -->
+
         <div class="card bg-white border-2 border-[rgba(18, 18, 18, 0.10)]">
           <figure class="px-10 pt-10">
             <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
@@ -250,10 +307,34 @@
               <span><i class="fa-solid fa-star-half-stroke"></i></span>
             </div>
             <div class="card-actions">
-              <button class="text-[#F85559]">Details</button>
+              <button class="text-[#F85559]" onclick="my_modal_3.showModal()">Details</button>
+
+              <!-- modal 3  -->
+
+              <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                  <img class="mx-auto mb-2" src="./images/fruit8.png" alt="">
+                  <h3 class="font-bold text-lg">Red Dragon!</h3>
+                  <p class="py-4">Press ESC key or click the button below to close</p>
+                  <div class="text-[#F85559] my-3">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                  </div>
+                  <div class="modal-action">
+                    <button class="btn outline outline-2 outline-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
             </div>
           </div>
         </div>
+
+        <!-- card 4  -->
+
         <div class="card bg-white border-2 border-[rgba(18, 18, 18, 0.10)]">
           <figure class="px-10 pt-10">
             <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
@@ -270,16 +351,40 @@
               <span><i class="fa-solid fa-star-half-stroke"></i></span>
             </div>
             <div class="card-actions">
-              <button class="text-[#F85559]">Details</button>
+              <button class="text-[#F85559]" onclick="my_modal_4.showModal()">Details</button>
+
+              <!-- modal 4  -->
+
+              <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                  <img class="mx-auto mb-2" src="./images/fruit9.png" alt="">
+                  <h3 class="font-bold text-lg">Banana!</h3>
+                  <p class="py-4">Press ESC key or click the button below to close</p>
+                  <div class="text-[#F85559] my-3">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span><i class="fa-solid fa-star-half-stroke"></i></span>
+                  </div>
+                  <div class="modal-action">
+                    <button class="btn outline outline-2 outline-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center">
+        <button class=" mt-4 py-2 px-4 bg-[#F85559] text-white font-bold rounded-lg">Show All</button>
       </div>
     </section>
 
     <!-- Meet the team section  -->
 
-    <section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-2 mt-6 mb-8 ">
+    <section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-2 mt-6 mb-8">
       <div class="text-white bg-banner-1">
         <div class="text-center space-y-4 pt-10 px-4 mb-10">
           <h1 class="text-4xl font-extrabold">
@@ -290,7 +395,11 @@
             literature from 45 BC, making it over 2000 years old.
           </p>
         </div>
+
+        <!-- experts of meat team  -->
+
         <div class="grid grid-cols-1 lg:grid-cols-4">
+          <!-- expert 1  -->
           <div class="mb-8 lg:mb-32 text-center">
             <img class="mx-auto" src="./images/member1.png" alt="">
             <div class="mt-3">
@@ -303,6 +412,7 @@
               </div>
             </div>
           </div>
+          <!-- expert 2  -->
           <div class="mb-8 lg:mb-32 text-center">
             <img class="mx-auto" src="./images/member2.png" alt="">
             <div class="mt-3">
@@ -315,6 +425,7 @@
               </div>
             </div>
           </div>
+          <!-- expert 3  -->
           <div class="mb-8 lg:mb-32 text-center">
             <img class="mx-auto" src="./images/member3.png" alt="">
             <div class="mt-3">
@@ -327,6 +438,7 @@
               </div>
             </div>
           </div>
+          <!-- expert 4  -->
           <div class="mb-8 lg:mb-32 text-center">
             <img class="mx-auto" src="./images/member4.png" alt="">
             <div class="mt-3">
@@ -351,10 +463,13 @@
         <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin
           literature from 45 BC, making it over 2000 years old.</p>
       </div>
+      <!-- dedicated team of why choose section  -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+        <!-- image of mobile view  -->
         <div class=" lg:hidden my-3">
           <img src="./images/whychoose1.png" alt="">
         </div>
+        <!-- dedicated team 1 -->
         <div class="space-y-3">
           <div class="lg:flex text-center gap-5">
             <span><i class="fa-solid fa-people-group mb-4 mt-5 bg-gray-200 p-2 rounded-[50%]"></i></span>
@@ -384,9 +499,11 @@
             </div>
           </div>
         </div>
+        <!-- dedicated team img  -->
         <div class="hidden lg:flex my-3">
           <img src="./images/whychoose1.png" alt="">
         </div>
+        <!-- dedicated team 2 -->
         <div class="space-y-3">
           <div class="lg:flex text-center flex-row-reverse gap-5">
             <span><i class="fa-solid fa-people-group mt-5 mb-4 bg-gray-200 p-2 rounded-[50%]"></i></span>
@@ -450,7 +567,6 @@
           <li><a href=""><i class="fa-brands fa-apple"></i></a></li>
           <li><a href=""><i class="fa-brands fa-instagrm"></i></a></li>
           <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-
         </ul>
       </div>
     </div>
